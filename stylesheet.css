@@ -1,10 +1,11 @@
+header{
+    display: flex;
+}
 img{
     width: 7%;
-    position: absolute;
     left: 0px;
 }
 h1{
-    position: absolute;
     size: 40px;
     width: 30%;
     text-align: center;
