@@ -1,9 +1,15 @@
 img{
-    width: 20%;
-    display: block;
+    width: 7%;
+    position: absolute;
+    left: 0px;
 }
-title{
+h1{
+    position: absolute;
     size: 40px;
     width: 30%;
-    align-content: center;
+    text-align: center;
+
+}
+nav{
+    left: 500px;
 }
