@@ -1,16 +1,41 @@
+body{
+    margin: 0 0 0;
+}
 header{
     display: flex;
+    background-color: rgb(187, 92, 92);
 }
 img{
     width: 7%;
-    left: 0px;
 }
 h1{
     size: 40px;
     width: 30%;
-    text-align: center;
+    text-align: right;
+    color: white;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 60px;
+  margin-right: 0;
+  font-family: cursive ;
 
+}
+#top{
+    display: flex;
+    flex-direction: column;
+    width: 93%;
 }
 nav{
     left: 500px;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+}
+input{
+    padding: 20px;
+    font-size: 30px;
+    border: 0ch;
+    background-color: rgb(187, 92, 92);
+
 }
