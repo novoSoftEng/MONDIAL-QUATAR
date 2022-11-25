@@ -94,3 +94,6 @@ button{
     background-color: black;
     margin-right: 0;
 }
+iframe{
+    border: none;
+}
