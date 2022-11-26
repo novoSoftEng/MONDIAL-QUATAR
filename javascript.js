@@ -6,7 +6,7 @@ let mountains = [
   { joueur: "yassin bounou", description : "né le 5 avril 1991 à Montréal (Canada), est un footballeur international marocain évoluant au poste de gardien de but au Séville FC en Liga."},
   { joueur: "Azdin Ounahi", description :" né le 19 avril 2000 à Casablanca au Maroc, est un footballeur international marocain qui évolue au poste de milieu central au Angers SCO."}
 ];
-mountains.className="tt";
+
 
 function generateTableHead(table, data) {
   let thead = table.createTHead();
@@ -24,7 +24,7 @@ function generateTableHead(table, data) {
     let text1 = document.createTextNode("suprimer");
 th1.appendChild(text1);
 row.appendChild(th1);
-
+ 
     th.appendChild(text);
     row.appendChild(th);
 }
@@ -70,6 +70,6 @@ input.className="t2";
 
    document.getElementById("d1").appendChild(txt);
    document.getElementById("d1").appendChild(input);
-
+ 
 
 

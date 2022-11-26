@@ -95,6 +95,43 @@ button{
     margin-right: 0;
 }
 #table{
-    width: 50%;
+    width: 20%;
     height: 300px;
+    margin-left: 5px;
+}
+.t1{
+    margin-top: 10px;
+    padding: 7px;
+    font-size: large;
+    margin-left: 1%;
+}
+.t2{
+    padding: 7px;
+    font-size: large;
+    color: white;
+    background-color:  rgb(122, 6, 35);
+    border: 1px dotted;
+}
+.bt1{
+    padding: 15px;
+    font-size: large;
+     color: white;
+background-color:  rgb(117, 20, 20);
+border: 1px dotted;
+}
+
+table{
+    background: url(th.jpg) ;
+    background-size: 500px;
+}
+.rows{
+    color: #ddd;
+}
+body{
+    background-color: rgb(156, 35, 35) ;
+}
+body{
+    background: url(coup.jpg);
+    background-size: 1400px;
+   
 }
