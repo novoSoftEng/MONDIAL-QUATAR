@@ -94,3 +94,7 @@ button{
     background-color: black;
     margin-right: 0;
 }
+#table{
+    width: 50%;
+    height: 300px;
+}

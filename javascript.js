@@ -1,34 +1,75 @@
+
 let mountains = [
-    { name: "Monte Falco", height: 1658, place: "Parco Foreste Casentinesi" },
-    { name: "Monte Falterona", height: 1654, place: "Parco Foreste Casentinesi" },
-    { name: "Poggio Scali", height: 1520, place: "Parco Foreste Casentinesi" },
-    { name: "Pratomagno", height: 1592, place: "Parco Foreste Casentinesi" },
-    { name: "Monte Amiata", height: 1738, place: "Siena" }
-  ];
-  
-  function generateTableHead(table, data) {
-    let thead = table.createTHead();
-    let row = thead.insertRow();
-    for (let key of data) {
-      let th = document.createElement("th");
-      let text = document.createTextNode(key);
-      th.appendChild(text);
-      row.appendChild(th);
-    }
+  { joueur: "Achraf Hakimi", description : "né le 4 novembre 1998 à Madrid, est un footballeur international marocain évoluant au poste d'arrière droit au Paris Saint-Germain." },
+  { joueur: "Soufian Boufal", description : " né le 17 septembre 1993 à Paris, est un footballeur international marocain qui évolue au poste d'ailier gauche ou de milieu offensif au sein du club de l'Angers SCO." },
+  { joueur: "Hakim Zyach", description : "né le 19 mars 1993 à Dronten, est un footballeur international marocain évoluant au poste d'ailier droit ou de milieu offensif à Chelsea."},
+  { joueur: "yassin bounou", description : "né le 5 avril 1991 à Montréal (Canada), est un footballeur international marocain évoluant au poste de gardien de but au Séville FC en Liga."},
+  { joueur: "Azdin Ounahi", description :" né le 19 avril 2000 à Casablanca au Maroc, est un footballeur international marocain qui évolue au poste de milieu central au Angers SCO."}
+];
+mountains.className="tt";
+
+function generateTableHead(table, data) {
+  let thead = table.createTHead();
+  let row = thead.insertRow();
+  for (let key of data) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
   }
-  
-  function generateTable(table, data) {
-    for (let element of data) {
-      let row = table.insertRow();
-      for (key in element) {
-        let cell = row.insertCell();
-        let text = document.createTextNode(element[key]);
-        cell.appendChild(text);
-      }
+  let th = document.createElement("th");
+  let th1 = document.createElement("th");
+
+    let text = document.createTextNode("modifier");
+    let text1 = document.createTextNode("suprimer");
+th1.appendChild(text1);
+row.appendChild(th1);
+
+    th.appendChild(text);
+    row.appendChild(th);
+}
+
+function generateTable(table, data) {
+  for (let element of data) {
+    let row = table.insertRow();
+    for (key in element) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(element[key]);
+      cell.appendChild(text);
     }
+    var btn1 = document.createElement("input");
+    btn1.type="button";
+    btn1.value = "modifier";
+    btn1.className="bt1";
+    let cell = row.insertCell();
+    cell.append(btn1);
+
+    var btn2 = document.createElement("input");
+    btn2.type="button";
+    btn2.value = "suprimer";
+    btn2.className="bt1";
+
+    let cell1 = row.insertCell();
+    cell1.append(btn2);
   }
-  
-  let table = document.querySelector("table");
-  let data = Object.keys(mountains[0]);
-  generateTableHead(table, data);
-  generateTable(table, mountains);
+}
+
+let table = document.querySelector("table");
+let data = Object.keys(mountains[0]);
+generateTable(table, mountains);
+generateTableHead(table, data);
+
+var txt=document.createElement("input");
+txt.className="t1";
+txt.type="text";
+txt.placeholder="entrer le joueur";
+var input=document.createElement("input");
+input.type="button";
+input.value="ajouter";
+input.className="t2";
+
+   document.getElementById("d1").appendChild(txt);
+   document.getElementById("d1").appendChild(input);
+
+
+
