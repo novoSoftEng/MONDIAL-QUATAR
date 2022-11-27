@@ -74,7 +74,6 @@ button{
 }
 #v2{
     width: 22%;
-    background-color: aqua;
 }
 #v34{
     display: flex;
@@ -82,16 +81,13 @@ button{
     width: 59%;
 }
 #v3{
-    background-color: blue;
     height: 40%;
 }
 #v4{
-    background-color: red;
     height: 60%;
 }
 #v5{
     width: 22%;
-    background-color: black;
     margin-right: 0;
 }
 iframe{
