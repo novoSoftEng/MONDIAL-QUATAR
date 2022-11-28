@@ -93,3 +93,14 @@ button{
 iframe{
     border: none;
 }
+img{
+    width: 20px;
+    height: 20px;
+    display: inline;
+}
+p{
+    display: inline;
+}
+li{
+    list-style-type: none ;
+}
