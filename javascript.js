@@ -54,8 +54,8 @@ let a_p1 = ['La France est la première équipe à se qualifier pour les huitiè
     let br = document.createElement("br");
     let p = document.createElement("p");
     p.innerText = a_p1[i];
-    page_a.appendChild(p);
-    page_a.appendChild(br);
+    page_a.append(p);
+    page_a.append(br);
 
   }
 }
