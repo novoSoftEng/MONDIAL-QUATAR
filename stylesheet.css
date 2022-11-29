@@ -151,3 +151,12 @@ footer{
     color: white;
     display: flex;
 }
+
+footer{
+    height: 145px;
+    margin-top: 0;
+}
+ul{
+    margin-top: 0;
+    margin-left: 0;
+}
