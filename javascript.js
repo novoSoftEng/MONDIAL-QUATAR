@@ -262,7 +262,7 @@ function TableMatchs(tableM, dataM) {
 }
 
 let tableM = document.getElementById("tableM");
-let dataM = Object.keys(Match1F[0]);
-TableMatchs(tableM, Matchs);
+let dataM = Object.keys(Match[0]);
+TableMatchs(tableM, Match);
 hTableMatchs(tableM, dataM);
 
