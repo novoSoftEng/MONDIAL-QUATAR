@@ -74,7 +74,6 @@ button{
 }
 #v2{
     width: 22%;
-    background-color: aqua;
 }
 #v34{
     display: flex;
@@ -82,18 +81,16 @@ button{
     width: 59%;
 }
 #v3{
-    background-color: blue;
     height: 40%;
 }
 #v4{
-    background-color: red;
     height: 60%;
 }
 #v5{
     width: 22%;
-    background-color: black;
     margin-right: 0;
 }
+
 #table{
     width: 20%;
     height: 300px;
@@ -134,4 +131,27 @@ body{
     background: url(coup.jpg);
     background-size: 1400px;
    
+}
+
+iframe{
+    border: none;
+}
+img{
+    width: 20px;
+    height: 20px;
+    display: inline;
+}
+p{
+    display: inline;
+}
+li{
+    list-style-type: none ;
+}
+footer h2{
+    color: black;
+}
+footer{
+    background-color: rgb(109, 29, 29);
+    color: white;
+    display: flex;
 }
