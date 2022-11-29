@@ -104,3 +104,11 @@ p{
 li{
     list-style-type: none ;
 }
+footer h2{
+    color: black;
+}
+footer{
+    background-color: rgb(109, 29, 29);
+    color: white;
+    display: flex;
+}

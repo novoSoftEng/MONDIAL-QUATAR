@@ -66,7 +66,6 @@ for (let i = 0, l = a_p[num].length; i < l; i++) {
 function fon_a(num) {
   var hrf = ['./images/a1.jpg','./images/a2.jpg','./images/a3.jpg'];
   document.querySelector('iframe[name="v3"]').src = hrf[num];
-  alert(document.querySelector('iframe[name="v3"]').src);
   page_a(num);
 }
 
