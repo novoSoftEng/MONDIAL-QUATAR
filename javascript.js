@@ -51,6 +51,10 @@ function generateTable(table, data) {
 
     let cell1 = row.insertCell();
     cell1.append(btn2);
+    btn2.onclick=function(){
+      var i=row.rowIndex;
+      table.deleteRow(i);
+    }
   }
 }
 
@@ -92,19 +96,19 @@ input.addEventListener("click", (event) => {
   btn4.type = "button";
   btn4.value = "suprimer";
   btn4.className = "bt1";
-  btn3.onclick= "supprimer(this)";
+ 
   cell3.append(btn3);
   cell4.append(btn4);
- 
+
+  btn4.onclick=function(){
+    var i=row1.rowIndex;
+    table.deleteRow(i);
+  }
 });
   
 
 }
 
-function supprimer(r) {
-  var i=r.parentNode.rowIndex ;
-  table.deleteRow(i);
-}
 
 
 
