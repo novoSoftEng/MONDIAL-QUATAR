@@ -55,6 +55,7 @@ function generateTable(table, data) {
       var i=row.rowIndex;
       table.deleteRow(i);
     }
+    
   }
 }
 
@@ -62,6 +63,7 @@ let table = document.querySelector("table");
 let data = Object.keys(mountains[0]);
 generateTable(table, mountains);
 generateTableHead(table, data);
+
 function fc1(){
 var txt = document.createElement("input");
 txt.className = "t1";
@@ -103,6 +105,16 @@ input.addEventListener("click", (event) => {
   btn4.onclick=function(){
     var i=row1.rowIndex;
     table.deleteRow(i);
+  }
+  btn3.onclick=function(){
+    let n1 = String(prompt("entrer le joueur"));
+  let n2 = String(prompt("entrer la description"));
+  let contenuNouveau = document.createTextNode(n1);
+  cell1.replaceChild(contenuNouveau,contenu);
+  let contenuNouveau1 = document.createTextNode(n2);
+  cell2.replaceChild(contenuNouveau1,contenu2);
+ 
+  
   }
 });
   
