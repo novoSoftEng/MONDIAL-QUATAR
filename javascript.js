@@ -102,7 +102,7 @@ input.addEventListener("click", (event) => {
 }
 
 function supprimer(r) {
-  var i=r.parentNode.parentNode.rowIndex ;
+  var i=r.parentNode.rowIndex ;
   table.deleteRow(i);
 }
 
