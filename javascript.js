@@ -265,8 +265,9 @@ function generateMatchs(tableInitial, dataInitial) {
     }
   }
 }
-function table() {
-  let v = document.getElementById("v2");
+function matchs() {
+  let v2 = document.getElementById("v2");
+  v2.replaceChildren();
   let matchs = [Match1F, Match2F, Match3F, Match4F, Match5F, Match6F,
     Match1C, Match2C, Match3C, Match4C, Match5C, Match6C];
   for (let i = 0; i < matchs.length; i++) {
@@ -277,4 +278,31 @@ function table() {
     generateMatchsHead(tableInitial, dataInitial);
     v2.append(tableInitial);
   }
+}
+
+
+//Groupes
+let GroupeF = [
+  { Groupe_F: "MAROC", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+  { Groupe_F: "CROTIA", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+  { Groupe_F: "BELGIUM", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+  { Groupe_F: "CANADA", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+];
+
+let GroupeC = [
+  { Groupe_C: "SAUDI ARABIA", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+  { Groupe_C: "ARGENTINE", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+  { Groupe_C: "POLOGNE", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+  { Groupe_C: "MEXIQUE", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+];
+function groupes(g) {
+  let v2 = document.getElementById("v2");
+  v2.replaceChildren();
+  let groupes = [ GroupeF,GroupeC];
+var groupe = groupes[g];
+    let tableInitial = document.createElement("table");
+    let dataInitial = Object.keys(groupe[0]);
+    generateMatchs(tableInitial, groupe);
+    generateMatchsHead(tableInitial, dataInitial);
+    v2.append(tableInitial);
 }
