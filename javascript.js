@@ -153,10 +153,7 @@ function page_a(num) {
 
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 function fon_a(num) {
   var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg'];
   document.querySelector('iframe[name="v3"]').src = hrf[num];
