@@ -67,7 +67,9 @@ button{
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {    background-color: rgb(184, 181, 182);
     padding: 10px;
-border-radius: 50%;}
+border-radius: 50%;
+}
+
 #vo{
     display: flex;
     height: 500px;
@@ -92,6 +94,8 @@ border-radius: 50%;}
     width: 22%;
     margin-right: 0;
     overflow: auto;
+    border: 1px solid blue;
+background-image: url(pag.jpg);
 }
 
 #table{
@@ -135,10 +139,15 @@ body{
 iframe{
     border: none;
 }
-im2{
-    width: 20px;
-    height: 20px;
+.im2{
+    width: 150px;
+    height: 80px;
     display: inline;
+    filter: brightness(100%);
+    margin-top: 27px;
+    margin-right: 24px;
+    border-style: dotted;
+    border-radius: 30px;
 }
 p{
     display: inline;
@@ -153,7 +162,7 @@ footer{
     background-color: rgb(100, 13, 32);
     color: white;
     display: flex;
-    height: 145px;
+    height: 160px;
     margin-top: 0;
     margin: 0;
 }
@@ -170,6 +179,17 @@ ul{
     width: 220px;
     border: 1px solid blue;
     border-radius: 20%;
+
+}
+
+.tx{
+    color: white;
+}
+.imF{
+    margin-top: 30px;
+    width: 120px;
+    height: 120px;
+    margin-left: 5px;
 }
 
 
