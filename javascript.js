@@ -1,10 +1,10 @@
 
 let mountains = [
-  { joueur: "Achraf Hakimi",  description: "né le 4 novembre 1998 à Madrid, est un footballeur international marocain évoluant au poste d'arrière droit au Paris Saint-Germain." },
+  { joueur: "Achraf Hakimi", description: "né le 4 novembre 1998 à Madrid, est un footballeur international marocain évoluant au poste d'arrière droit au Paris Saint-Germain." },
   { joueur: "Soufian Boufal", description: " né le 17 septembre 1993 à Paris, est un footballeur international marocain qui évolue au poste d'ailier gauche ou de milieu offensif au sein du club de l'Angers SCO." },
-  { joueur: "Hakim Zyach",    description: "né le 19 mars 1993 à Dronten, est un footballeur international marocain évoluant au poste d'ailier droit ou de milieu offensif à Chelsea." },
-  { joueur: "yassin bounou",  description: "né le 5 avril 1991 à Montréal (Canada), est un footballeur international marocain évoluant au poste de gardien de but au Séville FC en Liga." },
-  { joueur: "Azdin Ounahi",   description: " né le 19 avril 2000 à Casablanca au Maroc, est un footballeur international marocain qui évolue au poste de milieu central au Angers SCO." }
+  { joueur: "Hakim Zyach", description: "né le 19 mars 1993 à Dronten, est un footballeur international marocain évoluant au poste d'ailier droit ou de milieu offensif à Chelsea." },
+  { joueur: "yassin bounou", description: "né le 5 avril 1991 à Montréal (Canada), est un footballeur international marocain évoluant au poste de gardien de but au Séville FC en Liga." },
+  { joueur: "Azdin Ounahi", description: " né le 19 avril 2000 à Casablanca au Maroc, est un footballeur international marocain qui évolue au poste de milieu central au Angers SCO." }
 ];
 
 
@@ -123,10 +123,10 @@ function fc1() {
 
 }
 
-let table = document.querySelector("table");
+/*let table = document.getElementById("page_a");
 let data = Object.keys(mountains[0]);
 generateTable(table, mountains);
-generateTableHead(table, data);
+generateTableHead(table, data);*/
 //actualite
 
 function page_a(num) {
@@ -149,25 +149,9 @@ function page_a(num) {
 
   }
 
-  btn3.onclick = function () {
-    let n1 = String(prompt("entrer le joueur"));
-    let n2 = String(prompt("entrer la description"));
-    let contenuNouveau = document.createTextNode(n1);
-    cell1.replaceChild(contenuNouveau, contenu);
-    let contenuNouveau1 = document.createTextNode(n2);
-    cell2.replaceChild(contenuNouveau1, contenu2);
 
 
-  }
 }
-
-
-
-
-
-
-
-
 
 
 function fon_a(num) {
@@ -176,3 +160,121 @@ function fon_a(num) {
   page_a(num);
 }
 
+//MATCHS
+let Match1F = [
+  { Groupe_F: "MAROC" },
+  { Groupe_F: "0 - 0", date: "23 NOVEMBRE | 11:00" },
+  { Groupe_F: "CROTIA" }
+
+];
+
+let Match2F = [
+  { Groupe_F: "BELGIUM" },
+  { Groupe_F: "1 - 0", date: "23 NOVEMBRE | 14:00" },
+  { Groupe_F: "CANADA" }
+
+];
+
+let Match3F = [
+  { Groupe_F: "MAROC" },
+  { Groupe_F: "2 - 0", date: "27 NOVEMBRE | 14:00" },
+  { Groupe_F: "BELGIUM" }
+
+];
+
+let Match4F = [
+  { Groupe_F: "CROTIA" },
+  { Groupe_F: "0 - 0", date: "27 NOVEMBRE | 17:00" },
+  { Groupe_F: "CANADA" }
+
+];
+let Match5F = [
+  { Groupe_F: "MAROC" },
+  { Groupe_F: "0 - 0", date: "01 DECEMBRE | 16:00" },
+  { Groupe_F: "CANADA" }
+
+];
+let Match6F = [
+  { Groupe_F: "CROTIA" },
+  { Groupe_F: "0 - 0", date: "01 DECEMBRE | 16:00" },
+  { Groupe_F: "BELGIUM" }
+
+];
+
+let Match1C = [
+  { Groupe_C: "SAUDI ARABIA" },
+  { Groupe_C: "2 - 1", date: "22 NOVELBRE | 16:00" },
+  { Groupe_C: "ARGENTINE" }
+
+];
+
+let Match2C = [
+  { Groupe_C: "MEXIQUE" },
+  { Groupe_C: "0 - 0", date: "22 NOVELBRE | 16:00" },
+  { Groupe_C: "POLOGNE" }
+
+];
+
+let Match3C = [
+  { Groupe_C: "POLOHNE" },
+  { Groupe_C: "2 - 0", date: "26 NOVELBRE | 16:00" },
+  { Groupe_C: "SAUDI ARABIA" }
+
+];
+
+let Match4C = [
+  { Groupe_C: "ARGENTINE" },
+  { Groupe_C: "2 - 0", date: "26 NOVELBRE | 16:00" },
+  { Groupe_C: "MEXIQUE" }
+
+];
+
+let Match5C = [
+  { Groupe_C: "POLOGNE" },
+  { Groupe_C: "0 - 0", date: "30 NOVELBRE | 16:00" },
+  { Groupe_C: "ARGENTINE" }
+
+];
+
+let Match6C = [
+  { Groupe_C: "MEXIQUE" },
+  { Groupe_C: "0 - 0", date: "30 NOVELBRE | 16:00" },
+  { Groupe_C: "SAUDI ARABIA" }
+
+];
+function generateMatchsHead(tableInitial, dataInitial) {
+  let thead = tableInitial.createTHead();
+  let row = thead.insertRow();
+  for (let key of dataInitial) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+
+  }
+}
+
+function generateMatchs(tableInitial, dataInitial) {
+  for (let element of dataInitial) {
+    let row = tableInitial.insertRow();
+    for (key in element) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(element[key]);
+      cell.appendChild(text);
+
+    }
+  }
+}
+function table() {
+  let v = document.getElementById("v2");
+  let matchs = [Match1F, Match2F, Match3F, Match4F, Match5F, Match6F,
+    Match1C, Match2C, Match3C, Match4C, Match5C, Match6C];
+  for (let i = 0; i < matchs.length; i++) {
+    var match = matchs[i];
+    let tableInitial = document.createElement("table");
+    let dataInitial = Object.keys(match[0]);
+    generateMatchs(tableInitial, match);
+    generateMatchsHead(tableInitial, dataInitial);
+    v2.append(tableInitial);
+  }
+}
