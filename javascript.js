@@ -148,7 +148,7 @@ function page_a(num) {
     page_a.append(br);
 
   }
-<<<<<<< HEAD
+
   btn3.onclick = function () {
     let n1 = String(prompt("entrer le joueur"));
     let n2 = String(prompt("entrer la description"));
@@ -167,8 +167,8 @@ function page_a(num) {
 
 
 
-=======
-}
+
+
 
 function fon_a(num) {
   var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg'];
@@ -176,4 +176,3 @@ function fon_a(num) {
   page_a(num);
 }
 
->>>>>>> a88cd687c5b97406110fa658e6a6338a809b1221
