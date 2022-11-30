@@ -137,9 +137,15 @@ function page_a(num) {
   ["Cette deuxième journée du mondial de football au Qatar marque l'entrée en scène de l'Angleterre, qui affronte ce lundi l'Iran dans le groupe B.",
     "La sélection anglaise devra faire sans son arrière latéral droit, Kyle Walker, blessé aux adducteurs. Le défenseur de Manchester City n'a pas joué depuis le 2 octobre. De son côté, l'Iran entre en compétition sans pression, mais avec un effectif amoindri à cause des blessures. "
     ,
-    "Le milieu de terrain Omid Ebrahimi est forfait pour ce mondial, blessé à l'aine. L'attaquant du Bayer Leverkusen Sardar Azmoun fait quant à lui partie de l'effectif, malgré une déchirure au mollet le mois dernier."]];
+    "Le milieu de terrain Omid Ebrahimi est forfait pour ce mondial, blessé à l'aine. L'attaquant du Bayer Leverkusen Sardar Azmoun fait quant à lui partie de l'effectif, malgré une déchirure au mollet le mois dernier. Bienvenue sur le site de cours et de didacticiels informatiques au format pdf à télécharger gratuitement. Tous les cours sont complets et destinés aux débutants . Vous n'avez donc pas besoin d'expérience pour commencer. Il suffit de cliquer sur un cours d'informatique qui vous intéresse et c'est parti! ."  
+
+   
+  
+   
+  ]];
   let page_a = document.getElementById("page_a");
   page_a.replaceChildren();
+  page_a.className="ronaldo";
   for (let i = 0, l = a_p[num].length; i < l; i++) {
     let br = document.createElement("br");
     let p = document.createElement("p");
@@ -164,6 +170,8 @@ function page_a(num) {
 function fon_a(num) {
   var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg'];
   document.querySelector('iframe[name="v3"]').src = hrf[num];
+  fon_a.className="imm";
   page_a(num);
+
 }
 
