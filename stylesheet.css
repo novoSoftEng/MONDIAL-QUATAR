@@ -3,7 +3,7 @@ body{
 }
 header{
     display: flex;
-    background-color: rgb(187, 92, 92);
+    background-color: rgb(100, 13, 32);
 }
 img{
     width: 7%;
@@ -36,8 +36,8 @@ button{
     padding: 20px;
     font-size: 30px;
     border: 0ch;
-    background-color: rgb(187, 92, 92);
-
+    background-color: rgb(100, 13, 32);
+    color: rgb(251, 255, 10);
 }
 .dropdown {
     position: relative;
@@ -65,7 +65,9 @@ button{
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: red;}
+  .dropdown:hover .dropbtn {    background-color: rgb(184, 181, 182);
+    padding: 10px;
+border-radius: 50%;}
 #vo{
     display: flex;
     height: 500px;
@@ -89,6 +91,7 @@ button{
 #v5{
     width: 22%;
     margin-right: 0;
+    overflow: auto;
 }
 
 #table{
@@ -106,15 +109,15 @@ button{
     padding: 7px;
     font-size: large;
     color: white;
-    background-color:  rgb(122, 6, 35);
-    border: 1px dotted;
+    background-color: rgb(100, 13, 32);
+        border: 1px dotted;
 }
 .bt1{
     padding: 15px;
     font-size: large;
      color: white;
-background-color:  rgb(117, 20, 20);
-border: 1px dotted;
+     background-color: rgb(100, 13, 32);
+     border: 1px dotted;
 }
 
 table{
@@ -125,14 +128,14 @@ table{
     color: #ddd;
 }
 body{
-    background-color: rgb(156, 35, 35) ;
+    background-color: rgb(255, 255, 255);
 }
 
 
 iframe{
     border: none;
 }
-img{
+im2{
     width: 20px;
     height: 20px;
     display: inline;
@@ -147,16 +150,26 @@ footer h2{
     color: black;
 }
 footer{
-    background-color: rgb(109, 29, 29);
+    background-color: rgb(100, 13, 32);
     color: white;
     display: flex;
-}
-
-footer{
     height: 145px;
     margin-top: 0;
+    margin: 0;
 }
+.titreFotter{
+    color: white;
+}
+
+
 ul{
     margin-top: 0;
     margin-left: 0;
 }
+.page_A{
+    width: 220px;
+    border: 1px solid blue;
+    border-radius: 20%;
+}
+
+
