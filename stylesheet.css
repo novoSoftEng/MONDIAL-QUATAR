@@ -72,14 +72,22 @@ border-radius: 50%;
 
 #vo{
     display: flex;
-    height: 500px;
     margin-right: 0;
-    width: 100%;
+   
 }
 #v2{
     width: 22%;
     border: 1px solid blue;
 }
+#v2 table{
+    border: 3px solid  ;
+  width: 80%;
+  border-radius: 20%;
+  margin-left: 25px;
+  background-color: blanchedalmond;
+
+}
+
 #v34{
     display: flex;
     flex-direction: column;
@@ -131,7 +139,7 @@ height: 100%;
 }
 
 table{
-    background: url(th.jpg) ;
+    background-color: antiquewhite ;
     background-size: 500px;
 }
 .rows{
