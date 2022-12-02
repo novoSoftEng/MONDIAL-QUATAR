@@ -273,19 +273,44 @@ function generateMatchs(tableInitial, dataInitial) {
     }
   }
 }
-function matchs() {
+function matchs(g) {
   let v2 = document.getElementById("v2");
   v2.replaceChildren();
   let matchs = [Match1F, Match2F, Match3F, Match4F, Match5F, Match6F,
     Match1C, Match2C, Match3C, Match4C, Match5C, Match6C];
-  for (let i = 0; i < matchs.length; i++) {
-    var match = matchs[i];
-    let tableInitial = document.createElement("table");
-    let dataInitial = Object.keys(match[0]);
-    generateMatchs(tableInitial, match);
-    generateMatchsHead(tableInitial, dataInitial);
-    v2.append(tableInitial);
-  }
+    switch (g) {
+      case 0:
+        for (let i = 0; i < matchs.length/2; i++) {
+          var match = matchs[i];
+          let tableInitial = document.createElement("table");
+          let dataInitial = Object.keys(match[0]);
+          generateMatchs(tableInitial, match);
+          generateMatchsHead(tableInitial, dataInitial);
+          v2.append(tableInitial);
+        }
+        break;
+        case 1:
+          for (let i = 6; i < matchs.length/2+6; i++) {
+            var match = matchs[i];
+            let tableInitial = document.createElement("table");
+            let dataInitial = Object.keys(match[0]);
+            generateMatchs(tableInitial, match);
+            generateMatchsHead(tableInitial, dataInitial);
+            v2.append(tableInitial);
+          }
+          break;
+      default:
+        for (let i = 0; i < matchs.length; i++) {
+          var match = matchs[i];
+          let tableInitial = document.createElement("table");
+          let dataInitial = Object.keys(match[0]);
+          generateMatchs(tableInitial, match);
+          generateMatchsHead(tableInitial, dataInitial);
+          v2.append(tableInitial);
+        }
+        break;
+    }
+  
 }
 
 
