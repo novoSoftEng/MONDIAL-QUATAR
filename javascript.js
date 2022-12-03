@@ -68,7 +68,7 @@ function generateTable(table, data) {
   }
 }
 
-function Boutton_ajout(v4,table) {
+function Boutton_ajout(v4, table) {
   var txt = document.createElement("input");
   txt.className = "t1";
   txt.type = "text";
@@ -327,7 +327,7 @@ let GroupeC = [
 ];
 function groupes(g) {
   let v2 = document.getElementById("v2");
-  var hrf = ['photoMaroc.html','photoCanada.html'];
+  var hrf = ['photoMaroc.html', 'photoCanada.html'];
   v2.replaceChildren();
   let groupes = [GroupeF, GroupeC];
   var groupe = groupes[g];
@@ -339,15 +339,31 @@ function groupes(g) {
   //
   tableInitial.rows[1].addEventListener("click", () => {
     document.querySelector('iframe[name="v3"]').src = hrf[0];
-    
-    let v4=document.getElementById("v4");
-    v4.replaceChildren();
-    let table = document.createElement("table");
-    let data = Object.keys(joueurMaroc[0]);
-    generateTable(table, joueurMaroc);
-    generateTableHead(table, data);
-    
-    v4.append(table);
-    Boutton_ajout(v4,table);
+    creeTable();
+
   });
 }
+function creeTable(joueur) {
+  let v4 = document.getElementById("v4");
+  let table = document.createElement("table");
+  let data = Object.keys(joueurMaroc[0]);
+    if(joueur===true){
+      v4.replaceChildren(); /*
+      let jou = joueurMaroc[joueur];
+      generateTable(table, jou);
+      generateTableHead(table, data);
+
+      v4.append(table);
+      Boutton_ajout(v4, table);*/
+    }
+
+    else{
+      v4.replaceChildren();
+      generateTable(table, joueurMaroc);
+      generateTableHead(table, data);
+
+      v4.append(table);
+      Boutton_ajout(v4, table);
+      }
+  }
+
