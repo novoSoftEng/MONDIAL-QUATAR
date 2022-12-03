@@ -1,5 +1,5 @@
 
-let mountains = [
+let joueurMaroc = [
   { joueur: "Achraf Hakimi", description: "né le 4 novembre 1998 à Madrid, est un footballeur international marocain évoluant au poste d'arrière droit au Paris Saint-Germain." },
   { joueur: "Soufian Boufal", description: " né le 17 septembre 1993 à Paris, est un footballeur international marocain qui évolue au poste d'ailier gauche ou de milieu offensif au sein du club de l'Angers SCO." },
   { joueur: "Hakim Zyach", description: "né le 19 mars 1993 à Dronten, est un footballeur international marocain évoluant au poste d'ailier droit ou de milieu offensif à Chelsea." },
@@ -327,7 +327,7 @@ let GroupeC = [
 ];
 function groupes(g) {
   let v2 = document.getElementById("v2");
-  var hrf = ['photoCanada.html'];
+  var hrf = ['photoMaroc.html','photoCanada.html'];
   v2.replaceChildren();
   let groupes = [GroupeF, GroupeC];
   var groupe = groupes[g];
@@ -337,14 +337,14 @@ function groupes(g) {
   generateMatchsHead(tableInitial, dataInitial);
   v2.append(tableInitial);
   //
-  tableInitial.rows[4].addEventListener("click", () => {
+  tableInitial.rows[1].addEventListener("click", () => {
     document.querySelector('iframe[name="v3"]').src = hrf[0];
     
     let v4=document.getElementById("v4");
     v4.replaceChildren();
     let table = document.createElement("table");
-    let data = Object.keys(mountains[0]);
-    generateTable(table, mountains);
+    let data = Object.keys(joueurMaroc[0]);
+    generateTable(table, joueurMaroc);
     generateTableHead(table, data);
     
     v4.append(table);
