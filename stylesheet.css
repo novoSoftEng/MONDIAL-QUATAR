@@ -77,37 +77,39 @@ border-radius: 50%;
 }
 #v2{
     width: 22%;
-    border: 1px solid blue;
+    background-color: rgb(245, 190, 38);
 }
 #v2 table{
-    border: 3px solid  ;
   width: 80%;
-  border-radius: 20%;
   margin-left: 25px;
-  background-color: blanchedalmond;
+  background-color: white;
+  margin-top: 10px;
 
 }
+
 
 #v34{
     display: flex;
     flex-direction: column;
     width: 59%;
-border: 1px solid blue;
+
+
 }
 #v3{
-    border: 1px solid blue;
     height: 100%;
     resize: both;
+    background: url("coup actua.jpg");
+    background-size: 1200px;
+
 }
 #v4{
-    border: 1px solid blue;
     height: 100%;
+
 }
 #v5{
     width: 22%;
     margin-right: 0;
     overflow: auto;
-    border: 1px solid blue;
 background-image: url(pag.jpg);
 height: 100%;
 }
@@ -191,9 +193,13 @@ ul{
 }
 .page_A{
     width: 220px;
-    border: 1px solid blue;
     border-radius: 20%;
+    border: 0;
+    transition:transform;
 
+}
+.page_A :hover{
+    transform: translateY(-10px);
 }
 
 .tx{
@@ -220,4 +226,3 @@ font-size: x-larger;
     text-decoration: dotted;
     width: 40%;
 }
-
