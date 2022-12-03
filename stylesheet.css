@@ -79,7 +79,7 @@ border-radius: 50%;
     width: 22%;
     background-color: rgb(100, 13, 32);
     height: 860px;
-    overflow: auto;
+    overflow: auto  ;
 }
 #v2 table{
   width: 80%;
@@ -223,15 +223,19 @@ margin-top: 15px;
 font-size: x-larger;
 }
 
-.imm{
-    width: 20%;
-    height: 10%;
-}
+
 .titrF{
-    text-decoration: dotted;
-    width: 40%;
+    width: 250px;
+    margin-top: 90px;
+    font-size: x-large;
+    border: 1px dotted;
+margin-right: 20px;
+border-radius: 20%;
 }
 .dropbtn a{
     text-decoration: none;
     color: rgb(251, 255, 10);
+}
+.ronaldo{
+    background-color: white;
 }

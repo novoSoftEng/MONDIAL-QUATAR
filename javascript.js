@@ -139,7 +139,8 @@ function page_a(num) {
 
 
 
-  ]];
+  ]
+,["PAYS-BAS QUALIFIÉS POUR LES QUARTS APRÈS LEUR SUCCÈS CONTRE LES ETATS-UNIS (3-1)","COUPE DU MONDE - Les Pays-Bas n'ont jamais vraiment tremblé. Grâce à des buts de Memphis Depay, Daley Blind et Denzel Dumfries, les hommes de Louis van Gaal ont décroché samedi après-midi le premier ticket pour les quarts de finale du Mondial qatari, en battant les Etats-Unis (3-1). La réduction du score de Haji Wright n'a pas suffi. Les Oranje affronteront l'Argentine ou l'Australie."],["COUPE DU MONDE - Depuis le retour de Karim Benzema, Didier Deschamps était en recherche d’un équilibre différent pour son équipe de France."," Le forfait du Madrilène n’y a rien changé : l’équipe de 2022 est plus attirée vers l’avant que sa devancière de 2018. Cela comporte des risques, évidents. Mais ils sont assumés. Et, jusqu’ici, ça fonctionne plutôt bien."]];
   let page_a = document.getElementById("v4");
   page_a.replaceChildren();
   page_a.className = "ronaldo";
@@ -158,9 +159,8 @@ function page_a(num) {
 
 
 function fon_a(num) {
-  var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg'];
+  var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg',"./images/pays.jpg","./images/benzima.jpg"];
   document.querySelector('iframe[name="v3"]').src = hrf[num];
-  fon_a.className = "imm";
   page_a(num);
 
 }
