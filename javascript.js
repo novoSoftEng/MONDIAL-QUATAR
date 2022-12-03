@@ -8,6 +8,7 @@ let joueurMaroc = [
 ];
 
 
+  
 function generateTableHead(table, data) {
   let thead = table.createTHead();
   let row = thead.insertRow();
@@ -159,8 +160,10 @@ function page_a(num) {
 
 function fon_a(num) {
   var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg'];
-  document.querySelector('iframe[name="v3"]').src = hrf[num];
-  fon_a.className = "imm";
+  let img=document.createElement("img");
+  img.src=hrf[num];
+  let v3= document.getElementById("v3");
+  v3.append(img);
   page_a(num);
 
 }
