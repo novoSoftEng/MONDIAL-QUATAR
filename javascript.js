@@ -68,7 +68,7 @@ function generateTable(table, data) {
   }
 }
 
-function fc1() {
+function Boutton_ajout(v4,table) {
   var txt = document.createElement("input");
   txt.className = "t1";
   txt.type = "text";
@@ -78,8 +78,8 @@ function fc1() {
   input.value = "ajouter";
   input.className = "t2";
 
-  document.getElementById("d1").appendChild(txt);
-  document.getElementById("d1").appendChild(input);
+  v4.appendChild(txt);
+  v4.appendChild(input);
   input.addEventListener("click", (event) => {
     let row1 = table.insertRow();
     let cell1 = row1.insertCell();
@@ -123,10 +123,7 @@ function fc1() {
 
 }
 
-/*let table = document.getElementById("page_a");
-let data = Object.keys(mountains[0]);
-generateTable(table, mountains);
-generateTableHead(table, data);*/
+
 //actualite
 
 function page_a(num) {
@@ -137,15 +134,15 @@ function page_a(num) {
   ["Cette deuxième journée du mondial de football au Qatar marque l'entrée en scène de l'Angleterre, qui affronte ce lundi l'Iran dans le groupe B.",
     "La sélection anglaise devra faire sans son arrière latéral droit, Kyle Walker, blessé aux adducteurs. Le défenseur de Manchester City n'a pas joué depuis le 2 octobre. De son côté, l'Iran entre en compétition sans pression, mais avec un effectif amoindri à cause des blessures. "
     ,
-    "Le milieu de terrain Omid Ebrahimi est forfait pour ce mondial, blessé à l'aine. L'attaquant du Bayer Leverkusen Sardar Azmoun fait quant à lui partie de l'effectif, malgré une déchirure au mollet le mois dernier. Bienvenue sur le site de cours et de didacticiels informatiques au format pdf à télécharger gratuitement. Tous les cours sont complets et destinés aux débutants . Vous n'avez donc pas besoin d'expérience pour commencer. Il suffit de cliquer sur un cours d'informatique qui vous intéresse et c'est parti! ."  
+    "Le milieu de terrain Omid Ebrahimi est forfait pour ce mondial, blessé à l'aine. L'attaquant du Bayer Leverkusen Sardar Azmoun fait quant à lui partie de l'effectif, malgré une déchirure au mollet le mois dernier. Bienvenue sur le site de cours et de didacticiels informatiques au format pdf à télécharger gratuitement. Tous les cours sont complets et destinés aux débutants . Vous n'avez donc pas besoin d'expérience pour commencer. Il suffit de cliquer sur un cours d'informatique qui vous intéresse et c'est parti! ."
 
-   
-  
-   
+
+
+
   ]];
-  let page_a = document.getElementById("page_a");
+  let page_a = document.getElementById("v4");
   page_a.replaceChildren();
-  page_a.className="ronaldo";
+  page_a.className = "ronaldo";
   for (let i = 0, l = a_p[num].length; i < l; i++) {
     let br = document.createElement("br");
     let p = document.createElement("p");
@@ -163,7 +160,7 @@ function page_a(num) {
 function fon_a(num) {
   var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg'];
   document.querySelector('iframe[name="v3"]').src = hrf[num];
-  fon_a.className="imm";
+  fon_a.className = "imm";
   page_a(num);
 
 }
@@ -278,64 +275,79 @@ function matchs(g) {
   v2.replaceChildren();
   let matchs = [Match1F, Match2F, Match3F, Match4F, Match5F, Match6F,
     Match1C, Match2C, Match3C, Match4C, Match5C, Match6C];
-    switch (g) {
-      case 0:
-        for (let i = 0; i < matchs.length/2; i++) {
-          var match = matchs[i];
-          let tableInitial = document.createElement("table");
-          let dataInitial = Object.keys(match[0]);
-          generateMatchs(tableInitial, match);
-          generateMatchsHead(tableInitial, dataInitial);
-          v2.append(tableInitial);
-        }
-        break;
-        case 1:
-          for (let i = 6; i < matchs.length/2+6; i++) {
-            var match = matchs[i];
-            let tableInitial = document.createElement("table");
-            let dataInitial = Object.keys(match[0]);
-            generateMatchs(tableInitial, match);
-            generateMatchsHead(tableInitial, dataInitial);
-            v2.append(tableInitial);
-          }
-          break;
-      default:
-        for (let i = 0; i < matchs.length; i++) {
-          var match = matchs[i];
-          let tableInitial = document.createElement("table");
-          let dataInitial = Object.keys(match[0]);
-          generateMatchs(tableInitial, match);
-          generateMatchsHead(tableInitial, dataInitial);
-          v2.append(tableInitial);
-        }
-        break;
-    }
-  
+  switch (g) {
+    case 0:
+      for (let i = 0; i < matchs.length / 2; i++) {
+        var match = matchs[i];
+        let tableInitial = document.createElement("table");
+        let dataInitial = Object.keys(match[0]);
+        generateMatchs(tableInitial, match);
+        generateMatchsHead(tableInitial, dataInitial);
+        v2.append(tableInitial);
+      }
+      break;
+    case 1:
+      for (let i = 6; i < matchs.length / 2 + 6; i++) {
+        var match = matchs[i];
+        let tableInitial = document.createElement("table");
+        let dataInitial = Object.keys(match[0]);
+        generateMatchs(tableInitial, match);
+        generateMatchsHead(tableInitial, dataInitial);
+        v2.append(tableInitial);
+      }
+      break;
+    default:
+      for (let i = 0; i < matchs.length; i++) {
+        var match = matchs[i];
+        let tableInitial = document.createElement("table");
+        let dataInitial = Object.keys(match[0]);
+        generateMatchs(tableInitial, match);
+        generateMatchsHead(tableInitial, dataInitial);
+        v2.append(tableInitial);
+      }
+      break;
+  }
+
 }
 
 
 //Groupes
 let GroupeF = [
-  { Groupe_F: "MAROC", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
-  { Groupe_F: "CROTIA", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
-  { Groupe_F: "BELGIUM", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
-  { Groupe_F: "CANADA", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+  { Groupe_F: "MAROC", J: 1, G: 0, N: 1, P: 0, Dif: 0, Pts: 1 },
+  { Groupe_F: "CROTIA", J: 1, G: 0, N: 1, P: 0, Dif: 0, Pts: 1 },
+  { Groupe_F: "BELGIUM", J: 1, G: 0, N: 1, P: 0, Dif: 0, Pts: 1 },
+  { Groupe_F: "CANADA", J: 1, G: 0, N: 1, P: 0, Dif: 0, Pts: 1 },
 ];
 
 let GroupeC = [
-  { Groupe_C: "SAUDI ARABIA", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
-  { Groupe_C: "ARGENTINE", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
-  { Groupe_C: "POLOGNE", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
-  { Groupe_C: "MEXIQUE", J:1, G:0, N:1, P:0, Dif:0, Pts:1 },
+  { Groupe_C: "SAUDI ARABIA", J: 1, G: 0, N: 1, P: 0, Dif: 0, Pts: 1 },
+  { Groupe_C: "ARGENTINE", J: 1, G: 0, N: 1, P: 0, Dif: 0, Pts: 1 },
+  { Groupe_C: "POLOGNE", J: 1, G: 0, N: 1, P: 0, Dif: 0, Pts: 1 },
+  { Groupe_C: "MEXIQUE", J: 1, G: 0, N: 1, P: 0, Dif: 0, Pts: 1 },
 ];
 function groupes(g) {
   let v2 = document.getElementById("v2");
+  var hrf = ['photoCanada.html'];
   v2.replaceChildren();
-  let groupes = [ GroupeF,GroupeC];
-var groupe = groupes[g];
-    let tableInitial = document.createElement("table");
-    let dataInitial = Object.keys(groupe[0]);
-    generateMatchs(tableInitial, groupe);
-    generateMatchsHead(tableInitial, dataInitial);
-    v2.append(tableInitial);
+  let groupes = [GroupeF, GroupeC];
+  var groupe = groupes[g];
+  let tableInitial = document.createElement("table");
+  let dataInitial = Object.keys(groupe[0]);
+  generateMatchs(tableInitial, groupe);
+  generateMatchsHead(tableInitial, dataInitial);
+  v2.append(tableInitial);
+  //
+  tableInitial.rows[4].addEventListener("click", () => {
+    document.querySelector('iframe[name="v3"]').src = hrf[0];
+    
+    let v4=document.getElementById("v4");
+    v4.replaceChildren();
+    let table = document.createElement("table");
+    let data = Object.keys(mountains[0]);
+    generateTable(table, mountains);
+    generateTableHead(table, data);
+    
+    v4.append(table);
+    Boutton_ajout(v4,table);
+  });
 }
