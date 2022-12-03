@@ -100,6 +100,7 @@ border-radius: 50%;
 #v3{
     height: 120%;
     resize: both;
+    background: url("world.jpg");
    
 
 
@@ -107,7 +108,7 @@ border-radius: 50%;
 #v4{
     height: 100%;
     background: url("coup actua.jpg");
-    background-size: 780px;
+    background-size: 750px;
 
 }
 #v5{
@@ -229,4 +230,8 @@ font-size: x-larger;
 .titrF{
     text-decoration: dotted;
     width: 40%;
+}
+.dropbtn a{
+    text-decoration: none;
+    color: rgb(251, 255, 10);
 }
