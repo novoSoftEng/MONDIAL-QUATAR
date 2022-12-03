@@ -163,6 +163,7 @@ function fon_a(num) {
   let img=document.createElement("img");
   img.src=hrf[num];
   let v3= document.getElementById("v3");
+  v3.replaceChildren();
   v3.append(img);
   page_a(num);
 
@@ -330,7 +331,7 @@ let GroupeC = [
 ];
 function groupes(g) {
   let v2 = document.getElementById("v2");
-  var hrf = ['photoMaroc.html', 'photoCanada.html'];
+  let v3 = document.getElementById("v3");
   v2.replaceChildren();
   let groupes = [GroupeF, GroupeC];
   var groupe = groupes[g];
@@ -341,7 +342,8 @@ function groupes(g) {
   v2.append(tableInitial);
   //
   tableInitial.rows[1].addEventListener("click", () => {
-    document.querySelector('iframe[name="v3"]').src = hrf[0];
+    v3.replaceChildren();
+    map(v3);
     creeTable();
 
   });
@@ -350,7 +352,7 @@ function creeTable(joueur) {
   let v4 = document.getElementById("v4");
   let table = document.createElement("table");
   let data = Object.keys(joueurMaroc[0]);
-    if(joueur===true){
+    if(joueur==true){
       v4.replaceChildren(); /*
       let jou = joueurMaroc[joueur];
       generateTable(table, jou);
@@ -369,4 +371,27 @@ function creeTable(joueur) {
       Boutton_ajout(v4, table);
       }
   }
+function map(v3) {
+  let img=document.createElement("img");
+  img.src="./images/maroc.jpg"; 
+  img.usemap="#imaage-map";
+v3.append(img);
+  let map=document.createElement("map") ;
+  map.name="imaage-map";
+  
 
+  let area=document.createElement("area");
+      area.shape="rect" 
+      area.coords="484,147,519,196"; 
+      area.title="Yassine Bounou";
+      area.href="#";
+      /*area.onclick=function () {
+        creeTable(0);
+      }*/
+      map.appendChild(area);
+v3.append(map);
+v3.append(area);
+      
+
+
+}

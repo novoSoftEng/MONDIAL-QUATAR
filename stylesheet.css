@@ -5,9 +5,7 @@ header{
     display: flex;
     background-color: rgb(100, 13, 32);
 }
-img{
-    width: 7%;
-}
+
 h1{
     size: 40px;
     width: 30%;
@@ -97,7 +95,10 @@ border: 1px solid blue;
 #v3{
     border: 1px solid blue;
     height: 100%;
-    resize: both;
+
+}
+#v3 img{
+    width: 100%;
 }
 #v4{
     border: 1px solid blue;
