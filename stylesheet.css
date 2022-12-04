@@ -1,5 +1,7 @@
 body{
     margin: 0 0 0;
+    background-color: rgb(100, 13, 32);
+
 }
 header{
     display: flex;
@@ -88,6 +90,7 @@ button{
     position: absolute;
         min-width: 160px;
         z-index: 1;
+       
   }
   .dropdown-content a {
     color: black;
@@ -146,37 +149,36 @@ border-color: rgb(100, 13, 32);
     width: 59%;
 }
 #v3{
-    background: url("world.jpg");
-    border: 1px solid blue;
     position: relative;
 
 }
-
-
 #v3 img{
+    height: 450px;
     width: 100%;
-    height: 100%;
 }
+
+
+
 #v3 #vedio{
-    width: 775px;
-position: absolute;    
+    width: 780px;
+position: relative;    
 }
 #v4{
-    height: 110%;
-    background: url(".//coup\ actua.jpg");
-    background-size: 970px;
+    height: 120%;
+background-image: url("coup\ actua.jpg");    
+background-size: 920px;
 }
 #v5{
     width: 22%;
     margin-right: 0;
     overflow: auto;
- background-color: rgb(189, 74, 74);
-height: 100%;
+    background-color: rgb(100, 13, 32);
+    height: 930px;
 }
 
 #table{
     width: 20%;
-    height: 300px;
+    height: 320px;
     margin-left: 5px;
 }
 .t1{
@@ -252,7 +254,7 @@ ul{
     margin-left: 0;
 }
 .page_A{
-    width: 220px;
+    width: 210px;
     border-radius: 20%;
     border: 5px;
     border-style: outset;
