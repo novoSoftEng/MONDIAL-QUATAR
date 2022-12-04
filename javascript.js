@@ -1,10 +1,17 @@
 
 let joueurMaroc = [
-  { joueur: "Achraf Hakimi", description: "né le 4 novembre 1998 à Madrid, est un footballeur international marocain évoluant au poste d'arrière droit au Paris Saint-Germain." },
+  { joueur: "Roman sais", description: "né le 4 novembre 1998 à Madrid, est un footballeur international marocain évoluant au poste d'arrière droit au Paris Saint-Germain." },
   { joueur: "Soufian Boufal", description: " né le 17 septembre 1993 à Paris, est un footballeur international marocain qui évolue au poste d'ailier gauche ou de milieu offensif au sein du club de l'Angers SCO." },
   { joueur: "Hakim Zyach", description: "né le 19 mars 1993 à Dronten, est un footballeur international marocain évoluant au poste d'ailier droit ou de milieu offensif à Chelsea." },
   { joueur: "yassin bounou", description: "né le 5 avril 1991 à Montréal (Canada), est un footballeur international marocain évoluant au poste de gardien de but au Séville FC en Liga." },
   { joueur: "Azdin Ounahi", description: " né le 19 avril 2000 à Casablanca au Maroc, est un footballeur international marocain qui évolue au poste de milieu central au Angers SCO." }
+];
+let joueurCanada = [
+  { joueur: "alphonso Daives", description: " né le 16 mai 1997 à Scarborough en Ontario, est un joueur international canadien de socce, Il joue au poste de défenseur au CF Montréal en MLS." } ,
+  { joueur: "Stephen Eustaquio", description: " né le 17 septembre 1993 à Paris, est un footballeur international marocain qui évolue au poste d'ailier gauche ou de milieu offensif au sein du club de l'Angers SCO." },
+  { joueur: "Jonathan David", description: "né le 19 mars 1993 à Dronten, est un footballeur international marocain évoluant au poste d'ailier droit ou de milieu offensif à Chelsea." },
+  { joueur: "Cyle Larin", description: "né le 12 juin 1992 à Toronto en Ontario, est un joueur de soccer international canadien qui joue au poste de milieu central." },
+  { joueur: "Jonathan Osorio", description: " né le 19 avril 2000 à Casablanca au Maroc, est un footballeur international marocain qui évolue au poste de milieu central au Angers SCO." }
 ];
 
 
