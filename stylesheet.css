@@ -162,6 +162,7 @@ border-color: rgb(100, 13, 32);
 }
 #v3{
     position: relative;
+    background-color: black;
 
 }
 #v3 img{
@@ -173,12 +174,10 @@ border-color: rgb(100, 13, 32);
 
 #v3 #vedio{
     width: 780px;
-position: relative;   
-margin: 0; 
 }
 #v4{
     height: 90%;
-background-image: url("coup\ actua.jpg");    
+background-image: url("./images/coup\ actua.jpg");    
 background-size: 920px;
 margin: 0;
 }
@@ -251,12 +250,14 @@ li{
 }
 footer h2{
     color: black;}
-footer{background-color: rgb(100, 13, 32);
+footer{
+    background-color: rgb(100, 13, 32);
     color: white;
     display: flex;
     height: 160px;
     margin-top: 0;
-    margin: 0;}
+    margin: 0;
+border: 1px dotted blueviolet;}
 .titreFotter{
     color: white;}
 ul{
