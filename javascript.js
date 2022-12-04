@@ -173,7 +173,7 @@ function fon_a(num) {
 }
 
 //MATCHS
-let Match1F= [
+let Match1F = [
 
   { Groupe_F: "MAROC" },
   { Groupe_F: "0 - 0", date: "23 NOVEMBRE | 11:00" },
@@ -346,7 +346,13 @@ function groupes(g) {
   //
   tableInitial.rows[1].addEventListener("click", () => {
     v3.replaceChildren();
-    map(v3);
+    map(v3, 1);
+    creeTable();
+
+  });
+  tableInitial.rows[4].addEventListener("click", () => {
+    v3.replaceChildren();
+    map(v3, 0);
     creeTable();
 
   });
@@ -365,101 +371,53 @@ function creeTable(joueur) {
       v4.append(table);
       Boutton_ajout(v4, table);
       break;
-  
+
     default:
       v4.replaceChildren();
-    generateTable(table, joueurMaroc);
-    generateTableHead(table, data);
+      generateTable(table, joueurMaroc);
+      generateTableHead(table, data);
 
-    v4.append(table);
-    Boutton_ajout(v4, table);
+      v4.append(table);
+      Boutton_ajout(v4, table);
       break;
-  }
-    
-  }
+  }}
 
-  
-    
-  
+  function map(v3, g) {
+    let img = document.createElement("img");
+    switch (g) {
+      case 0:
+        img.src = "./images/canada.jpg";
+        v3.append(img);
+        let a1 = document.createElement("a");
+        a1.id = "xh";
+        a1.href = "https://en.wikipedia.org/wiki/Jupiter";
+        a1.target = "_blank";
+        v3.append(a1);
+        let a2 = document.createElement("a");
+        a2.id = "iy";
+        a2.href = "https://en.wikipedia.org/wiki/Jupiter";
+        a2.target = "_blank";
+        v3.append(a2);
 
-function map(v3) {
-  let img = document.createElement("img");
-  img.src = "./images/maroc.jpg";
-  v3.append(img);
-}
-let Class1 = [
-  { CT: "1", Equipes: "MAROC", Pts: 7 },
-  { CT: "2", Equipes: "CROTIA", Pts: 5 },
-  { CT: "3", Equipes: "BELGIUM", Pts: 4 },
-  { CT: "4", Equipes: "CANADA", Pts: 0 },
-];
+        break;
 
-let Class2 = [
-  { CT: "1", Equipes: "ARGENTINE", Pts: 6 },
-  { CT: "2", Equipes: "POLOGNE", Pts: 4 },
-  { CT: "3", Equipes: "MEXIQUE", Pts: 4 },
-  { CT: "4", Equipes: "SAUDI ARABIA", Pts: 3 },
-];
-
-
-function generateMatchsHead(tableInitial, dataInitial) {
-  let thead = tableInitial.createTHead();
-  let row = thead.insertRow();
-  for (let key of dataInitial) {
-    let th = document.createElement("th");
-    let text = document.createTextNode(key);
-    th.appendChild(text);
-    row.appendChild(th);
-
-  }
-}
-function generateMatchs(tableInitial, dataInitial) {
-  for (let element of dataInitial) {
-    let row = tableInitial.insertRow();
-    for (key in element) {
-      let cell = row.insertCell();
-      let text = document.createTextNode(element[key]);
-      cell.appendChild(text);
-
+      case 1:
+        img.src = "./images/maroc.jpg";
+        v3.append(img);
+        let a3 = document.createElement("a");
+        a3.id = "Sais";
+        a3.href = "https://en.wikipedia.org/wiki/Jupiter";
+        a3.target = "_blank";
+        v3.append(a3);
+        let a4 = document.createElement("a");
+        a4.id = "Bouno";
+        a4.href = "https://en.wikipedia.org/wiki/Jupiter";
+        a4.target = "_blank";
+        v3.append(a4);
+        break;
     }
-  }
-}
-//classement
-function Classe(g) {
-  let v2 = document.getElementById("v2");
-  v2.replaceChildren();
-  let Classe = [Class1, Class2];
-  switch (g) {
-    case 0:
-      for (let i = 0; i < Classe.length / 2; i++) {
-        var Classement = Classe[i];
-        let tableInitial = document.createElement("table");
-        let dataInitial = Object.keys(Classement[0]);
-        generateMatchs(tableInitial, Classement);
-        generateMatchsHead(tableInitial, dataInitial);
-        v2.append(tableInitial);
-      }
-      break;
-    case 1:
-      for (let i = 1; i < Classe.length / 2 + 1; i++) {
-        var Classement = Classe[i];
-        let tableInitial = document.createElement("table");
-        let dataInitial = Object.keys(Classement[0]);
-        generateMatchs(tableInitial, Classement);
-        generateMatchsHead(tableInitial, dataInitial);
-        v2.append(tableInitial);
-      }
-      break;
-    default:
-      for (let i = 0; i < Classe.length; i++) {
-        var Classement = Classe[i];
-        let tableInitial = document.createElement("table");
-        let dataInitial = Object.keys(Classement[0]);
-        generateMatchs(tableInitial, Classement);
-        generateMatchsHead(tableInitial, dataInitial);
-        v2.append(tableInitial);
-      }
-      break;
+
+
+
   }
 
-}

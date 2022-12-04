@@ -6,6 +6,47 @@ header{
     background-color: rgb(100, 13, 32);
 }
 
+#v3 img {
+    max-width: 100%;
+  }
+  
+  #xh{
+    
+    height: 15%;
+    width: 8%;
+    position: absolute;
+    left: 45%;
+    top: 15%;
+    bottom: 150%;
+  }
+  #iy {
+    
+    height: 15%;
+    width: 7%;
+    position: absolute;
+    left: 60%;
+    top: 17%;
+    bottom: 150%;
+  }
+  #Sais{
+    
+    height: 15%;
+    width: 7%;
+    position: absolute;
+    left: 76%;
+    top: 17%;
+    bottom: 150%;
+  }
+  #Bouno {
+    
+    height: 15%;
+    width: 7%;
+    position: absolute;
+    left: 18%;
+    top: 14%;
+    bottom: 150%;
+  }
+
 h1{
     size: 40px;
     width: 30%;
@@ -104,8 +145,10 @@ border-radius: 50%;
     width: 59%;
 }
 #v3{
-    height: 90%;
-    
+    background: url("world.jpg");
+    border: 1px solid blue;
+    position: relative;
+
 }
 
 
@@ -126,7 +169,7 @@ position: absolute;
     width: 22%;
     margin-right: 0;
     overflow: auto;
-    background-color: rgb(100, 13, 32);
+ background-color: rgb(189, 74, 74);
 height: 100%;
 }
 
