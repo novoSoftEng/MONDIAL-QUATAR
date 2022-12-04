@@ -174,6 +174,7 @@ function fon_a(num) {
 
 //MATCHS
 let Match1F= [
+
   { Groupe_F: "MAROC" },
   { Groupe_F: "0 - 0", date: "23 NOVEMBRE | 11:00" },
   { Groupe_F: "CROTIA" }
@@ -214,42 +215,42 @@ let Match6F = [
 
 let Match1C = [
   { Groupe_C: "SAUDI ARABIA" },
-  { Groupe_C: "2 - 1", date: "22 NOVELBRE | 16:00" },
+  { Groupe_C: "2 - 1", date: "22 NOVEMBRE | 16:00" },
   { Groupe_C: "ARGENTINE" }
 
 ];
 
 let Match2C = [
   { Groupe_C: "MEXIQUE" },
-  { Groupe_C: "0 - 0", date: "22 NOVELBRE | 16:00" },
+  { Groupe_C: "0 - 0", date: "22 NOVEMBRE | 16:00" },
   { Groupe_C: "POLOGNE" }
 
 ];
 
 let Match3C = [
   { Groupe_C: "POLOGNE" },
-  { Groupe_C: "2 - 0", date: "26 NOVELBRE | 16:00" },
+  { Groupe_C: "2 - 0", date: "26 NOVEMBRE | 16:00" },
   { Groupe_C: "SAUDI ARABIA" }
 
 ];
 
 let Match4C = [
   { Groupe_C: "ARGENTINE" },
-  { Groupe_C: "2 - 0", date: "26 NOVELBRE | 16:00" },
+  { Groupe_C: "2 - 0", date: "26 NOVEMBRE | 16:00" },
   { Groupe_C: "MEXIQUE" }
 
 ];
 
 let Match5C = [
   { Groupe_C: "POLOGNE" },
-  { Groupe_C: "0 - 2", date: "30 NOVELBRE | 16:00" },
+  { Groupe_C: "0 - 2", date: "30 NOVEMBRE | 16:00" },
   { Groupe_C: "ARGENTINE" }
 
 ];
 
 let Match6C = [
   { Groupe_C: "MEXIQUE" },
-  { Groupe_C: "2 - 1", date: "30 NOVELBRE | 16:00" },
+  { Groupe_C: "2 - 1", date: "30 NOVEMBRE | 16:00" },
   { Groupe_C: "SAUDI ARABIA" }
 
 ];
