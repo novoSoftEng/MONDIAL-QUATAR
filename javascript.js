@@ -174,6 +174,9 @@ function fon_a(num) {
   let v3 = document.getElementById("v3");
   v3.replaceChildren();
   v3.append(img);
+  let v4 = document.getElementById("v4");
+  v4.style.backgroundImage="none"
+
 
   page_a(num);
 
@@ -360,7 +363,7 @@ function groupes(g) {
   tableInitial.rows[4].addEventListener("click", () => {
     v3.replaceChildren();
     map(v3, 0);
-    creeTable('walo',joueurMaroc);
+    creeTable('walo',joueurCanada);
 
   });
 }
@@ -368,6 +371,7 @@ function creeTable(joueur,joueurMaroc) {
   let v4 = document.getElementById("v4");
   let table = document.createElement("table");
   let data = Object.keys(joueurMaroc[0]);
+  v4.style.backgroundImage="none"
   let jou=[];
   switch (joueur) {
     case 3:
@@ -410,14 +414,14 @@ function creeTable(joueur,joueurMaroc) {
         a1.href = "#";
         v3.append(a1);
         a1.onclick=function (){
-          creeTable(0,joueurMaroc);
+          creeTable(0,joueurCanada);
         }
         let a2 = document.createElement("a");
         a2.id = "iy";
         a2.href = "#";
         v3.append(a2);
         a2.onclick=function (){
-          creeTable(1,joueurMaroc);
+          creeTable(3,joueurCanada);
         }
 
         break;

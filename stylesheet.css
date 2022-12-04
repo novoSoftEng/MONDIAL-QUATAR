@@ -139,7 +139,7 @@ border-radius: 50%;
 #v2{
     width: 22%;
     background-color: rgb(100, 13, 32);
-    height: 930px;
+    height: 920px;
     overflow: auto  ;
 }
 #v2 table{
@@ -173,19 +173,21 @@ border-color: rgb(100, 13, 32);
 
 #v3 #vedio{
     width: 780px;
-position: relative;    
+position: relative;   
+margin: 0; 
 }
 #v4{
-    height: 120%;
+    height: 90%;
 background-image: url("coup\ actua.jpg");    
 background-size: 920px;
+margin: 0;
 }
 #v5{
     width: 22%;
     margin-right: 0;
     overflow: auto;
     background-color: rgb(100, 13, 32);
-    height: 930px;
+    height: 920px;
 }
 
 #table{
