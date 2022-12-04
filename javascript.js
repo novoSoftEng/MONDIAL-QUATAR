@@ -386,10 +386,6 @@ function map(v3) {
   let img = document.createElement("img");
   img.src = "./images/maroc.jpg";
   v3.append(img);
-  area.onclick = function () {
-    creeTable(0);
-  }
-  map.appendChild(area);
 }
 let Class1 = [
   { CT: "1", Equipes: "MAROC", Pts: 7 },
