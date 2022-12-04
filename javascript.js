@@ -196,13 +196,13 @@ let Match3F = [
 
 let Match4F = [
   { Groupe_F: "CROTIA" },
-  { Groupe_F: "0 - 0", date: "27 NOVEMBRE | 17:00" },
+  { Groupe_F: "3 - 1", date: "27 NOVEMBRE | 17:00" },
   { Groupe_F: "CANADA" }
 
 ];
 let Match5F = [
   { Groupe_F: "MAROC" },
-  { Groupe_F: "0 - 0", date: "01 DECEMBRE | 16:00" },
+  { Groupe_F: "2 - 1", date: "01 DECEMBRE | 16:00" },
   { Groupe_F: "CANADA" }
 
 ];
@@ -228,7 +228,7 @@ let Match2C = [
 ];
 
 let Match3C = [
-  { Groupe_C: "POLOHNE" },
+  { Groupe_C: "POLOGNE" },
   { Groupe_C: "2 - 0", date: "26 NOVELBRE | 16:00" },
   { Groupe_C: "SAUDI ARABIA" }
 
@@ -243,14 +243,14 @@ let Match4C = [
 
 let Match5C = [
   { Groupe_C: "POLOGNE" },
-  { Groupe_C: "0 - 0", date: "30 NOVELBRE | 16:00" },
+  { Groupe_C: "0 - 2", date: "30 NOVELBRE | 16:00" },
   { Groupe_C: "ARGENTINE" }
 
 ];
 
 let Match6C = [
   { Groupe_C: "MEXIQUE" },
-  { Groupe_C: "0 - 0", date: "30 NOVELBRE | 16:00" },
+  { Groupe_C: "2 - 1", date: "30 NOVELBRE | 16:00" },
   { Groupe_C: "SAUDI ARABIA" }
 
 ];
@@ -392,4 +392,80 @@ v3.append(img);
       map.appendChild(area);
 v3.append(map);
 v3.append(area);
+}
+let Class1 = [
+  { CT:"1", Equipes: "MAROC",  Pts:7 },
+  { CT:"2", Equipes: "CROTIA",  Pts:5 },
+  { CT:"3", Equipes: "BELGIUM",  Pts:4 },
+  { CT:"4", Equipes: "CANADA",  Pts:0 },
+];
+
+let Class2 = [
+  { CT:"1", Equipes: "ARGENTINE",  Pts:6 },
+  { CT:"2", Equipes: "POLOGNE",  Pts:4 },
+  { CT:"3", Equipes: "MEXIQUE",  Pts:4 },
+  { CT:"4", Equipes: "SAUDI ARABIA",  Pts:3 },
+];
+
+
+function generateMatchsHead(tableInitial, dataInitial) {
+  let thead = tableInitial.createTHead();
+  let row = thead.insertRow();
+  for (let key of dataInitial) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+
+  }
+}
+function generateMatchs(tableInitial, dataInitial) {
+  for (let element of dataInitial) {
+    let row = tableInitial.insertRow();
+    for (key in element) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(element[key]);
+      cell.appendChild(text);
+
+    }
+  }
+}
+//classement
+function Classe(g) {
+  let v2 = document.getElementById("v2");
+  v2.replaceChildren();
+  let Classe = [Class1, Class2];
+  switch (g) {
+    case 0:
+      for (let i = 0; i < Classe.length / 2; i++) {
+        var Classement = Classe[i];
+        let tableInitial = document.createElement("table");
+        let dataInitial = Object.keys(Classement[0]);
+        generateMatchs(tableInitial, Classement);
+        generateMatchsHead(tableInitial, dataInitial);
+        v2.append(tableInitial);
+      }
+      break;
+    case 1:
+      for (let i = 1; i < Classe.length / 2 + 1; i++) {
+        var Classement = Classe[i];
+        let tableInitial = document.createElement("table");
+        let dataInitial = Object.keys(Classement[0]);
+        generateMatchs(tableInitial, Classement);
+        generateMatchsHead(tableInitial, dataInitial);
+        v2.append(tableInitial);
+      }
+      break;
+    default:
+      for (let i = 0; i < Classe.length; i++) {
+        var Classement = Classe[i];
+        let tableInitial = document.createElement("table");
+        let dataInitial = Object.keys(Classement[0]);
+        generateMatchs(tableInitial, Classement);
+        generateMatchsHead(tableInitial, dataInitial);
+        v2.append(tableInitial);
+      }
+      break;
+  }
+
 }
