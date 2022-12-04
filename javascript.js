@@ -346,7 +346,13 @@ function groupes(g) {
   //
   tableInitial.rows[1].addEventListener("click", () => {
     v3.replaceChildren();
-    map(v3);
+    map(v3,1);
+    creeTable();
+
+  });
+  tableInitial.rows[4].addEventListener("click", () => {
+    v3.replaceChildren();
+    map(v3,0);
     creeTable();
 
   });
@@ -374,22 +380,43 @@ function creeTable(joueur) {
       Boutton_ajout(v4, table);
       }
   }
-function map(v3) {
-  let img=document.createElement("img");
-  img.src="./images/maroc.jpg"; 
-  img.usemap="#imaage-map";
-v3.append(img);
-  let map=document.createElement("map") ;
-  map.name="imaage-map";
-  let area=document.createElement("area");
-      area.shape="rect" 
-      area.coords="484,147,519,196"; 
-      area.title="Yassine Bounou";
-      area.href="#";
-      area.onclick=function () {
-        creeTable(0);
-      }
-      map.appendChild(area);
-v3.append(map);
-v3.append(area);
-}
+
+      function map(v3,g) {
+        let img=document.createElement("img");
+        switch (g) {
+          case 0:
+            img.src="./images/canada.jpg";
+            v3.append(img);
+      let a1=document.createElement("a");
+      a1.id="xh";
+      a1.href="https://en.wikipedia.org/wiki/Jupiter";
+      a1.target="_blank";
+      v3.append(a1);
+      let a2=document.createElement("a");
+      a2.id="iy";
+      a2.href="https://en.wikipedia.org/wiki/Jupiter";
+      a2.target="_blank";
+      v3.append(a2);
+      
+            break;
+        
+            case 1:
+            img.src="./images/maroc.jpg";
+            v3.append(img);
+            let a3=document.createElement("a");
+            a3.id="Sais";
+            a3.href="https://en.wikipedia.org/wiki/Jupiter";
+            a3.target="_blank";
+            v3.append(a3);
+            let a4=document.createElement("a");
+            a4.id="Bouno";
+            a4.href="https://en.wikipedia.org/wiki/Jupiter";
+            a4.target="_blank";
+            v3.append(a4);
+            break;
+        }
+       
+      
+        
+            }
+
