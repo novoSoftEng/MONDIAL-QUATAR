@@ -177,7 +177,6 @@ let Match1F= [
   { Groupe_F: "MAROC" },
   { Groupe_F: "0 - 0", date: "23 NOVEMBRE | 11:00" },
   { Groupe_F: "CROTIA" }
-
 ];
 
 let Match2F = [
