@@ -347,31 +347,41 @@ function groupes(g) {
   tableInitial.rows[1].addEventListener("click", () => {
     v3.replaceChildren();
     map(v3, 1);
-    creeTable();
+    creeTable('walo',joueurMaroc);
 
   });
   tableInitial.rows[4].addEventListener("click", () => {
     v3.replaceChildren();
     map(v3, 0);
-    creeTable();
+    creeTable('walo',joueurMaroc);
 
   });
 }
-function creeTable(joueur) {
+function creeTable(joueur,joueurMaroc) {
   let v4 = document.getElementById("v4");
   let table = document.createElement("table");
   let data = Object.keys(joueurMaroc[0]);
+  let jou=[];
   switch (joueur) {
-    case 0:
+    case 3:
       v4.replaceChildren();
-      let jou = joueurMaroc[joueur];
+      jou.push(joueurMaroc[joueur]);
       generateTable(table, jou);
       generateTableHead(table, data);
 
       v4.append(table);
       Boutton_ajout(v4, table);
       break;
-
+      case 0:
+        v4.replaceChildren();
+        
+        jou.push(joueurMaroc[joueur]);
+        generateTable(table, jou);
+        generateTableHead(table, data);
+  
+        v4.append(table);
+        Boutton_ajout(v4, table);
+        break;
     default:
       v4.replaceChildren();
       generateTable(table, joueurMaroc);
@@ -390,14 +400,18 @@ function creeTable(joueur) {
         v3.append(img);
         let a1 = document.createElement("a");
         a1.id = "xh";
-        a1.href = "https://en.wikipedia.org/wiki/Jupiter";
-        a1.target = "_blank";
+        a1.href = "#";
         v3.append(a1);
+        a1.onclick=function (){
+          creeTable(0,joueurMaroc);
+        }
         let a2 = document.createElement("a");
         a2.id = "iy";
-        a2.href = "https://en.wikipedia.org/wiki/Jupiter";
-        a2.target = "_blank";
+        a2.href = "#";
         v3.append(a2);
+        a2.onclick=function (){
+          creeTable(1,joueurMaroc);
+        }
 
         break;
 
@@ -406,14 +420,19 @@ function creeTable(joueur) {
         v3.append(img);
         let a3 = document.createElement("a");
         a3.id = "Sais";
-        a3.href = "https://en.wikipedia.org/wiki/Jupiter";
-        a3.target = "_blank";
+        a3.href = "#";
         v3.append(a3);
+        a3.onclick=function (){
+          creeTable(0,joueurMaroc);
+        }
+
         let a4 = document.createElement("a");
         a4.id = "Bouno";
-        a4.href = "https://en.wikipedia.org/wiki/Jupiter";
-        a4.target = "_blank";
+        a4.href = "#";
         v3.append(a4);
+        a4.onclick=function (){
+          creeTable(3,joueurMaroc);
+        }
         break;
     }
 
