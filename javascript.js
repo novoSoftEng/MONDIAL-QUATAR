@@ -379,19 +379,10 @@ function map(v3) {
   img.src="./images/maroc.jpg"; 
   img.usemap="#imaage-map";
 v3.append(img);
-  let map=document.createElement("map") ;
-  map.name="imaage-map";
-  let area=document.createElement("area");
-      area.shape="rect" 
-      area.coords="484,147,519,196"; 
-      area.title="Yassine Bounou";
-      area.href="#";
       area.onclick=function () {
         creeTable(0);
       }
       map.appendChild(area);
-v3.append(map);
-v3.append(area);
 }
 let Class1 = [
   { CT:"1", Equipes: "MAROC",  Pts:7 },
