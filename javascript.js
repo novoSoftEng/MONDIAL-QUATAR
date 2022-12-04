@@ -1,5 +1,5 @@
 
-let mountains = [
+let joueurMaroc = [
   { joueur: "Achraf Hakimi", description: "né le 4 novembre 1998 à Madrid, est un footballeur international marocain évoluant au poste d'arrière droit au Paris Saint-Germain." },
   { joueur: "Soufian Boufal", description: " né le 17 septembre 1993 à Paris, est un footballeur international marocain qui évolue au poste d'ailier gauche ou de milieu offensif au sein du club de l'Angers SCO." },
   { joueur: "Hakim Zyach", description: "né le 19 mars 1993 à Dronten, est un footballeur international marocain évoluant au poste d'ailier droit ou de milieu offensif à Chelsea." },
@@ -8,6 +8,7 @@ let mountains = [
 ];
 
 
+  
 function generateTableHead(table, data) {
   let thead = table.createTHead();
   let row = thead.insertRow();
@@ -68,7 +69,7 @@ function generateTable(table, data) {
   }
 }
 
-function Boutton_ajout(v4,table) {
+function Boutton_ajout(v4, table) {
   var txt = document.createElement("input");
   txt.className = "t1";
   txt.type = "text";
@@ -160,7 +161,13 @@ function page_a(num) {
 
 function fon_a(num) {
   var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg',"./images/pays.jpg","./images/benzima.jpg"];
-  document.querySelector('iframe[name="v3"]').src = hrf[num];
+
+  let img=document.createElement("img");
+  img.src=hrf[num];
+  let v3= document.getElementById("v3");
+  v3.replaceChildren();
+  v3.append(img);
+
   page_a(num);
 
 }
@@ -327,7 +334,7 @@ let GroupeC = [
 ];
 function groupes(g) {
   let v2 = document.getElementById("v2");
-  var hrf = ['photoCanada.html'];
+  let v3 = document.getElementById("v3");
   v2.replaceChildren();
   let groupes = [GroupeF, GroupeC];
   var groupe = groupes[g];
@@ -337,17 +344,52 @@ function groupes(g) {
   generateMatchsHead(tableInitial, dataInitial);
   v2.append(tableInitial);
   //
-  tableInitial.rows[4].addEventListener("click", () => {
-    document.querySelector('iframe[name="v3"]').src = hrf[0];
-    
-    let v4=document.getElementById("v4");
-    v4.replaceChildren();
-    let table = document.createElement("table");
-    let data = Object.keys(mountains[0]);
-    generateTable(table, mountains);
-    generateTableHead(table, data);
-    
-    v4.append(table);
-    Boutton_ajout(v4,table);
+  tableInitial.rows[1].addEventListener("click", () => {
+    v3.replaceChildren();
+    map(v3);
+    creeTable();
+
   });
+}
+function creeTable(joueur) {
+  let v4 = document.getElementById("v4");
+  let table = document.createElement("table");
+  let data = Object.keys(joueurMaroc[0]);
+    if(joueur==true){
+      v4.replaceChildren(); /*
+      let jou = joueurMaroc[joueur];
+      generateTable(table, jou);
+      generateTableHead(table, data);
+
+      v4.append(table);
+      Boutton_ajout(v4, table);*/
+    }
+
+    else{
+      v4.replaceChildren();
+      generateTable(table, joueurMaroc);
+      generateTableHead(table, data);
+
+      v4.append(table);
+      Boutton_ajout(v4, table);
+      }
+  }
+function map(v3) {
+  let img=document.createElement("img");
+  img.src="./images/maroc.jpg"; 
+  img.usemap="#imaage-map";
+v3.append(img);
+  let map=document.createElement("map") ;
+  map.name="imaage-map";
+  let area=document.createElement("area");
+      area.shape="rect" 
+      area.coords="484,147,519,196"; 
+      area.title="Yassine Bounou";
+      area.href="#";
+      area.onclick=function () {
+        creeTable(0);
+      }
+      map.appendChild(area);
+v3.append(map);
+v3.append(area);
 }
