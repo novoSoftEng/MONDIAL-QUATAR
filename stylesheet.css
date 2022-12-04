@@ -45,10 +45,12 @@ button{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
-    min-width: 160px;
+    background-color: rgb(184, 181, 182);
+        min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 30%;
+    border-style:outset ;
   }
   .dropdown-content a {
     color: black;
@@ -62,7 +64,9 @@ button{
   
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {
+    background-color: #ddd;
+border-radius: 30%;}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
@@ -87,10 +91,11 @@ border-radius: 50%;
 #v2 table{
   width: 80%;
   margin-left: 25px;
-  background-color: white;
+  background-color: #e25724;
   margin-top: 10px;
 
 }
+
 
 
 #v34{
@@ -142,6 +147,7 @@ height: 100%;
     color: white;
     background-color: rgb(100, 13, 32);
         border: 1px dotted;
+        cursor: pointer;
 }
 .bt1{
     padding: 15px;
@@ -149,6 +155,7 @@ height: 100%;
      color: white;
      background-color: rgb(100, 13, 32);
      border: 1px dotted;
+     cursor: pointer;
 }
 
 table{
@@ -182,9 +189,7 @@ p{
 li{
     list-style-type: none ;
 }
-footer h2{
-    color: black;
-}
+
 footer{
     background-color: rgb(100, 13, 32);
     color: white;
@@ -236,7 +241,7 @@ font-size: x-larger;
     margin-top: 90px;
     font-size: x-large;
     border: 1px dotted;
-margin-left: 300px;
+margin-left: 500px;
 border-radius: 20%;
 }
 .dropbtn a{
