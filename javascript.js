@@ -8,7 +8,7 @@ let joueurMaroc = [
 ];
 
 
-  
+
 function generateTableHead(table, data) {
   let thead = table.createTHead();
   let row = thead.insertRow();
@@ -141,7 +141,7 @@ function page_a(num) {
 
 
   ]
-,["PAYS-BAS QUALIFIÉS POUR LES QUARTS APRÈS LEUR SUCCÈS CONTRE LES ETATS-UNIS (3-1)","COUPE DU MONDE - Les Pays-Bas n'ont jamais vraiment tremblé. Grâce à des buts de Memphis Depay, Daley Blind et Denzel Dumfries, les hommes de Louis van Gaal ont décroché samedi après-midi le premier ticket pour les quarts de finale du Mondial qatari, en battant les Etats-Unis (3-1). La réduction du score de Haji Wright n'a pas suffi. Les Oranje affronteront l'Argentine ou l'Australie."],["COUPE DU MONDE - Depuis le retour de Karim Benzema, Didier Deschamps était en recherche d’un équilibre différent pour son équipe de France."," Le forfait du Madrilène n’y a rien changé : l’équipe de 2022 est plus attirée vers l’avant que sa devancière de 2018. Cela comporte des risques, évidents. Mais ils sont assumés. Et, jusqu’ici, ça fonctionne plutôt bien."]];
+    , ["PAYS-BAS QUALIFIÉS POUR LES QUARTS APRÈS LEUR SUCCÈS CONTRE LES ETATS-UNIS (3-1)", "COUPE DU MONDE - Les Pays-Bas n'ont jamais vraiment tremblé. Grâce à des buts de Memphis Depay, Daley Blind et Denzel Dumfries, les hommes de Louis van Gaal ont décroché samedi après-midi le premier ticket pour les quarts de finale du Mondial qatari, en battant les Etats-Unis (3-1). La réduction du score de Haji Wright n'a pas suffi. Les Oranje affronteront l'Argentine ou l'Australie."], ["COUPE DU MONDE - Depuis le retour de Karim Benzema, Didier Deschamps était en recherche d’un équilibre différent pour son équipe de France.", " Le forfait du Madrilène n’y a rien changé : l’équipe de 2022 est plus attirée vers l’avant que sa devancière de 2018. Cela comporte des risques, évidents. Mais ils sont assumés. Et, jusqu’ici, ça fonctionne plutôt bien."]];
   let page_a = document.getElementById("v4");
   page_a.replaceChildren();
   page_a.className = "ronaldo";
@@ -160,11 +160,11 @@ function page_a(num) {
 
 
 function fon_a(num) {
-  var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg',"./images/pays.jpg","./images/benzima.jpg"];
+  var hrf = ['./images/a1.jpg', './images/a2.jpg', './images/a3.jpg', "./images/pays.jpg", "./images/benzima.jpg"];
 
-  let img=document.createElement("img");
-  img.src=hrf[num];
-  let v3= document.getElementById("v3");
+  let img = document.createElement("img");
+  img.src = hrf[num];
+  let v3 = document.getElementById("v3");
   v3.replaceChildren();
   v3.append(img);
 
@@ -173,7 +173,7 @@ function fon_a(num) {
 }
 
 //MATCHS
-let Match1F= [
+let Match1F = [
   { Groupe_F: "MAROC" },
   { Groupe_F: "0 - 0", date: "23 NOVEMBRE | 11:00" },
   { Groupe_F: "CROTIA" }
@@ -355,47 +355,46 @@ function creeTable(joueur) {
   let v4 = document.getElementById("v4");
   let table = document.createElement("table");
   let data = Object.keys(joueurMaroc[0]);
-    if(joueur==true){
-      v4.replaceChildren(); /*
+  if (joueur == true) {
+    v4.replaceChildren();
       let jou = joueurMaroc[joueur];
       generateTable(table, jou);
       generateTableHead(table, data);
 
       v4.append(table);
-      Boutton_ajout(v4, table);*/
-    }
-
-    else{
-      v4.replaceChildren();
-      generateTable(table, joueurMaroc);
-      generateTableHead(table, data);
-
-      v4.append(table);
       Boutton_ajout(v4, table);
-      }
   }
+
+  else {
+    v4.replaceChildren();
+    generateTable(table, joueurMaroc);
+    generateTableHead(table, data);
+
+    v4.append(table);
+    Boutton_ajout(v4, table);
+  }
+}
 function map(v3) {
-  let img=document.createElement("img");
-  img.src="./images/maroc.jpg"; 
-  img.usemap="#imaage-map";
-v3.append(img);
-      area.onclick=function () {
-        creeTable(0);
-      }
-      map.appendChild(area);
+  let img = document.createElement("img");
+  img.src = "./images/maroc.jpg";
+  v3.append(img);
+  area.onclick = function () {
+    creeTable(0);
+  }
+  map.appendChild(area);
 }
 let Class1 = [
-  { CT:"1", Equipes: "MAROC",  Pts:7 },
-  { CT:"2", Equipes: "CROTIA",  Pts:5 },
-  { CT:"3", Equipes: "BELGIUM",  Pts:4 },
-  { CT:"4", Equipes: "CANADA",  Pts:0 },
+  { CT: "1", Equipes: "MAROC", Pts: 7 },
+  { CT: "2", Equipes: "CROTIA", Pts: 5 },
+  { CT: "3", Equipes: "BELGIUM", Pts: 4 },
+  { CT: "4", Equipes: "CANADA", Pts: 0 },
 ];
 
 let Class2 = [
-  { CT:"1", Equipes: "ARGENTINE",  Pts:6 },
-  { CT:"2", Equipes: "POLOGNE",  Pts:4 },
-  { CT:"3", Equipes: "MEXIQUE",  Pts:4 },
-  { CT:"4", Equipes: "SAUDI ARABIA",  Pts:3 },
+  { CT: "1", Equipes: "ARGENTINE", Pts: 6 },
+  { CT: "2", Equipes: "POLOGNE", Pts: 4 },
+  { CT: "3", Equipes: "MEXIQUE", Pts: 4 },
+  { CT: "4", Equipes: "SAUDI ARABIA", Pts: 3 },
 ];
 
 
