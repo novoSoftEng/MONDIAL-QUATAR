@@ -86,17 +86,15 @@ button{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(184, 181, 182);
         min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 30%;
-    border-style:outset ;
+        z-index: 1;
   }
   .dropdown-content a {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
+    padding: 5px;
+    background-color: #ddd;
+
     display: block;
   }
   .dropbtn{
@@ -106,14 +104,14 @@ button{
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #ddd;
-border-radius: 30%;}
+    background-color:white;
+}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {    background-color: rgb(184, 181, 182);
+  .dropdown:hover .dropbtn {    background-color:white;
     padding: 10px;
 border-radius: 50%;
 }
@@ -126,14 +124,17 @@ border-radius: 50%;
 #v2{
     width: 22%;
     background-color: rgb(100, 13, 32);
-    height: 860px;
+    height: 930px;
     overflow: auto  ;
 }
 #v2 table{
   width: 80%;
   margin-left: 25px;
-  background-color: #e25724;
   margin-top: 10px;
+  border: 5px ;
+border-style:outset;
+border-radius: 4px;
+border-color: rgb(100, 13, 32);
 
 }
 
@@ -161,9 +162,9 @@ border-radius: 50%;
 position: absolute;    
 }
 #v4{
-    height: 100%;
+    height: 110%;
     background: url(".//coup\ actua.jpg");
-    background-size: 870px;
+    background-size: 970px;
 }
 #v5{
     width: 22%;
@@ -253,9 +254,13 @@ ul{
 .page_A{
     width: 220px;
     border-radius: 20%;
-    border: 0;
+    border: 5px;
+    border-style: outset;
+    border-color:rgb(100, 13, 32) ;
     transition:transform;
     cursor: pointer;
+    box-shadow: 0px 8px 16px 0px white;
+
 }
 .page_A :hover{
     transform: translateY(-10px);

@@ -214,7 +214,7 @@ let Match6F = [
 ];
 
 let Match1C = [
-  { Groupe_C: "SAUDI ARABIA" },
+  { Groupe_C: "SAUDI" },
   { Groupe_C: "2 - 1", date: "22 NOVEMBRE | 16:00" },
   { Groupe_C: "ARGENTINE" }
 
@@ -420,4 +420,5 @@ function creeTable(joueur) {
 
 
   }
+
 
