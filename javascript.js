@@ -355,25 +355,33 @@ function creeTable(joueur) {
   let v4 = document.getElementById("v4");
   let table = document.createElement("table");
   let data = Object.keys(joueurMaroc[0]);
-  if (joueur == true) {
-    v4.replaceChildren();
+  switch (joueur) {
+    case 0:
+      v4.replaceChildren();
       let jou = joueurMaroc[joueur];
       generateTable(table, jou);
       generateTableHead(table, data);
 
       v4.append(table);
       Boutton_ajout(v4, table);
-  }
-
-  else {
-    v4.replaceChildren();
+      break;
+  
+    default:
+      v4.replaceChildren();
     generateTable(table, joueurMaroc);
     generateTableHead(table, data);
 
     v4.append(table);
     Boutton_ajout(v4, table);
+      break;
   }
-}
+    
+  }
+
+  
+    
+  
+
 function map(v3) {
   let img = document.createElement("img");
   img.src = "./images/maroc.jpg";
